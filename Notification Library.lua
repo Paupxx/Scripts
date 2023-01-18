@@ -123,6 +123,7 @@ function Lib.AddNotification(...)
     NotificationButton.TextSize = 15.000
     NotificationButton.TextWrapped = false
     NotificationButton.TextXAlignment = Enum.TextXAlignment.Center
+    NotificationButton.ZIndex = 10000
     
     -- mouse click function
     if AllowMouseClick then
@@ -139,7 +140,7 @@ function Lib.AddNotification(...)
     FrameSliderTimer.BorderColor3 = SliderColorProperty
     FrameSliderTimer.Position = UDim2.new(0, 0, 1, 0)
     FrameSliderTimer.Size = UDim2.new(1, 0, 0.125, 0)
-
+    FrameSliderTimer.ZIndex = 9999
     FrameSliderTimer.Parent = NotificationButton
     NotificationButton.Parent = Container
     
