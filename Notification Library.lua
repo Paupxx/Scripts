@@ -10,8 +10,10 @@ local Container = Instance.new("Frame")
 local FakeContainer = Instance.new("Frame")
 
 Holder.Name = "Holder"
-Holder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Holder.Parent = game.CoreGui
 Holder.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Holder.ResetOnSpawn = false
+Holder.ZIndexBehavior = Enum.ZIndexBehavior.Global
 
 Container.Name = "Container"
 Container.Parent = Holder
@@ -19,6 +21,7 @@ Container.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Container.BackgroundTransparency = 1
 Container.Position = UDim2.new(1, 0, 0, 0)
 Container.Size = UDim2.new(-0.25, 0, 0.98, 0)
+Container.ZIndex = 500
 
 local UIListLayout = Instance.new("UIListLayout")
 UIListLayout.Parent = Container
